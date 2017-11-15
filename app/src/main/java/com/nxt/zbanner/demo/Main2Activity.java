@@ -3,6 +3,8 @@ package com.nxt.zbanner.demo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.nxt.zbanner.demo.widget.ZDotView;
+
 public class Main2Activity extends AppCompatActivity {
     private ZDotView dotView;
 
