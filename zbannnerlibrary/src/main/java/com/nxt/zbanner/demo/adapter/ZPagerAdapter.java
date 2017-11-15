@@ -1,4 +1,4 @@
-package com.nxt.zbanner.demo;
+package com.nxt.zbanner.demo.adapter;
 
 import android.content.Context;
 import android.os.CountDownTimer;
@@ -12,6 +12,9 @@ import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.nxt.zbanner.demo.util.DensityUtil;
+import com.nxt.zbanner.demo.widget.ZBanner;
+import com.nxt.zbanner.demo.widget.ZDotView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,7 +25,7 @@ import java.util.List;
  * Created by zhangyonglu on 2017/11/15 001508:13
  */
 
-public class ZPagerAdapter extends PagerAdapter{
+public class ZPagerAdapter extends PagerAdapter {
     private Context mcontext;
     private List<Integer> mresids;
     private List<String> murllist;
@@ -33,7 +36,7 @@ public class ZPagerAdapter extends PagerAdapter{
     private ViewPager mvp;
     private MyCountDownTimer mycountdowntimer;
     ZBanner.OnBannerItemClick monbanneritemclick;
-    public ZPagerAdapter(Context context,Integer[] resids){
+    public ZPagerAdapter(Context context, Integer[] resids){
         this.mcontext=context;
         this.mresids= Arrays.asList(resids);
         mycountdowntimer=new MyCountDownTimer(3000,1000);
@@ -58,14 +61,14 @@ public class ZPagerAdapter extends PagerAdapter{
         }
     }
 
-    public ZPagerAdapter(Context context,String[] urllist){
+    public ZPagerAdapter(Context context, String[] urllist){
         this.mcontext=context;
         this.murllist=Arrays.asList(urllist);
         mycountdowntimer=new MyCountDownTimer(3000,1000);
         initview();
 
     }
-    public ZPagerAdapter(Context context,List<String> ulist){
+    public ZPagerAdapter(Context context, List<String> ulist){
         this.mcontext=context;
         this.murllist=ulist;
         mycountdowntimer=new MyCountDownTimer(3000,1000);

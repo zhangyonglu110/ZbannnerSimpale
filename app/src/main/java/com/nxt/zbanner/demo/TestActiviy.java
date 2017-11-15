@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.nxt.vp.demo.R;
+import com.nxt.zbanner.demo.adapter.ZPagerAdapter;
+import com.nxt.zbanner.demo.widget.ZBanner;
+
 
 /**
  * Created by zhangyonglu on 2017/11/15 001508:58

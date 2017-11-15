@@ -1,4 +1,4 @@
-package com.nxt.zbanner.demo;
+package com.nxt.zbanner.demo.widget;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;
@@ -6,6 +6,9 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+
+import com.nxt.zbanner.demo.adapter.ZPagerAdapter;
+import com.nxt.zbanner.demo.util.DensityUtil;
 
 /**
  * Created by zhangyonglu on 2017/11/14 001417:18
@@ -42,13 +45,13 @@ public class ZBanner extends FrameLayout{
     }
     private void init() {
         vp=new ViewPager(mcontext);
-        FrameLayout.LayoutParams layoutparams=new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT);
+        LayoutParams layoutparams=new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         vp.setLayoutParams(layoutparams);
         addView(vp);
 
         dotcontiner=new LinearLayout(mcontext);
-        FrameLayout.LayoutParams dotlayoutparams=new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,FrameLayout.LayoutParams.WRAP_CONTENT);
-        dotlayoutparams.setMargins(0,0,0,DensityUtil.dip2px(mcontext,12));
+        LayoutParams dotlayoutparams=new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+        dotlayoutparams.setMargins(0,0,0, DensityUtil.dip2px(mcontext,12));
         dotlayoutparams.gravity= Gravity.BOTTOM;
         dotcontiner.setGravity(Gravity.CENTER);
         dotcontiner.setOrientation(LinearLayout.HORIZONTAL);
@@ -64,7 +67,7 @@ public class ZBanner extends FrameLayout{
 
     }
 
-    interface OnBannerItemClick{
+    public interface OnBannerItemClick{
         void OnItemClick(int position);
     }
     public  void setbanneritemclick(OnBannerItemClick onbannerclick){

@@ -13,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.nxt.zbanner.demo.widget.ZDotView;
+
 import java.util.ArrayList;
 import java.util.List;
 

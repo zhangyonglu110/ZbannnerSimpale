@@ -1,4 +1,4 @@
-package com.nxt.zbanner.demo;
+package com.nxt.zbanner.demo.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
